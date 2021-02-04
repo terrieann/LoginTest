@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Results</title>
+  </head>
+
+  <body>
+
+  <form id ="form" action="results.html" method="get">
+  <div class="login-box">
+    <div id="error"></div>
+    <h1>Login</h1>
+
+    <div class="textbox">
+      <i class="fas fa-user"></i>
+      <input id="username" type="text" name="name" readonly>
+      <script type="text/javascript">
+        let params = new URLSearchParams(window.location.search)
+        let name = params.get("name")
+        document.getElementById('username').setAttribute('value', name)
+      </script>
+    </div>
+
+    <div class="textbox">
+      <i class="fas fa-user"></i>
+      <input id = "password" type="password" placeholder="Password" name="password" value="">
+    </div>
+
+
+    <button type="submit" id ="submit">Sign in</button>
+    <button type="reset" name="reset" id = "reset">Reset</button>
+
+    <a href="file:///D:/CodingProjects/index.html">Back to Form</a>
+
+  </div>
+  </body>
+</html>
